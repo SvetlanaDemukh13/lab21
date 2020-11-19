@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+    <title>Dasha</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="connect-type" content="text/html;charset=UTF-8"/>
+
+    <script language="JavaScript" type="text/JavaScript">
+    function hello() {
+    var id;
+    id=window.open("","example","width=800, height=550");
+    id.focus();
+    id.document.open();
+    id.document.write("<img style='width:700px; height: 450px' src='darya.jpg'>");
+    id.document.write("<input type='button' value='Закрыть окно' onclick='window.close();'> </form>");
+    id.document.close();
+    }
+
+    function bye() {
+    var id;
+    id=window.open("","example","width=600, height=350");
+    id.focus();
+    id.document.open();
+    id.document.write("<h1><form><textarea rows='10' cols='45' name='text'></textarea></form></h1>");
+    id.document.write("<input type='button' value='Закрыть окно' onclick='window.close();'> </form>");
+    id.document.close();
+    }
+
+    function ChangeText()
+    {
+    document.getElementById("p1").innerHTML="Дмитрий Витальевич, отпустите в столовку!";
+    }   
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="scrolling">Данная страничка посвящена Даше Конюх</div>
+        <div class="scrolling">Данная страничка посвящена Даше Конюх</div>
+        <div class="scrolling">Данная страничка посвящена Даше Конюх</div>        
+    </div>
+    <div class="box">
+        <div class="left left_2">
+            <img src="dasha2.jpg" width="80%" height="70%">
+            <form name="2">
+                <input type="button" value="Была малышкой, а стала..."
+                onclick="window.alert('Самой красивой девушкой, которая сводит всех с ума!..'); "><br /><br />
+            </form>
+        </div>
+        <div class="right">
+            <img src="dasha1.jpg" width="60%" height="80%">
+            <form name="2">
+                <input type="button" onclick="hello();" value="Что же значит имя Дарья?"/>
+            </form>
+        </div>
+    </div>
+    <div class="box">
+        <div class="left">
+            <img src="dasha3.jpg" width="40%" height="40%" style="margin-right: 20px;">
+            <img src="dasha4.jpg" width="40%" height="40%">
+        </div>
+        <div class="right">
+            <p class="text">Даша Конюх одна из самых миниатюрных девушек УИР'а. Она именно тот тип людей, кто сможет пройти и огонь, и воду, и Кочерова решить за одну пару. Кстати, он ласково называет Дашу булочкой. Но это другая история... Лучше посмотрите на Дашу! Симпатичная брюнетка с глазами цвета темного янтаря.</p>
+            <a href="javascript:window.alert('Sike!!! Вы ку-ку? Такой социальной сети не существует вообще-то!')" >Больше фотографий Даши в ее Инстаграмме</a>
+        </div>
+    </div>
+    <h1>А тут я написала текст при помощи метода concat()</h1>
+    <script>
+        var hell = 'Привет, ';
+        var phare = hell.concat('Даша', ', удачного дня.');
+document.write(phare);
+    </script>
+    <h2>Пока я делала лабораторную работу, мне показалось, что Даша кого-то мне напоминает...</h2>
+    <div class="box">
+        <div class="left">
+            <img src="olga-dibceva.jpg" width="50%" height="50%">
+        </div>
+        <div class="right">
+            <img src="dasha5.jpg" width="50%" height="50%">
+        </div>
+    </div>
+    <div class="center">
+        <p class="text2">Похожи?</p><input type="radio" name="answer" value="a1">Да
+            <input type="radio" name="answer" value="a2">Нет<Br>
+    </div>
+    <div class="center">
+        <p id="p1" class="text2">Даша такая красивая сегодня!</p>
+        <input type="button" onclick="ChangeText()" value="Изменить текст" />
+    </div>
+    <form>
+       <h2>Хотите сказать Даше пару теплых слов?</h2> 
+       <input type="submit" onclick="bye();" value="Да!">
+    </form>  
+</body>
+</html>
